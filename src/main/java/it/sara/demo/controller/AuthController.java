@@ -21,7 +21,6 @@ public class AuthController {
     @PostMapping("/token")
     public Map<String, String> token(@RequestParam String username,
                                      @RequestParam String password) {
-        // TODO: sostituisci con logica reale di login
         if (!"user".equals(username) || !"pass".equals(password)) {
             throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Bad credentials");
         }
