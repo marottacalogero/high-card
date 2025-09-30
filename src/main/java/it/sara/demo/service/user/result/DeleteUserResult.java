@@ -4,10 +4,9 @@ import it.sara.demo.service.result.GenericResult;
 import lombok.Getter;
 import lombok.Setter;
 
-
 @Getter
 @Setter
-public class AddUserResult extends GenericResult {
+public class DeleteUserResult extends GenericResult {
     private String userId;
     private String message;
 }

@@ -1,15 +1,12 @@
-package it.sara.demo.dto;
+package it.sara.demo.service.user.criteria;
 
+import it.sara.demo.service.criteria.GenericCriteria;
 import lombok.Getter;
 import lombok.Setter;
 
-/**
- * Data Transfer Object per rappresentare un utente.
- */
 @Getter
 @Setter
-public class UserDTO {
-    private String guid;
+public class CriteriaUpdateUser extends GenericCriteria {
     private String firstName;
     private String lastName;
     private String email;

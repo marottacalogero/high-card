@@ -22,4 +22,8 @@ public class UserRepository {
     public List<User> getAll() {
         return FakeDatabase.TABLE_USER;
     }
+
+    public boolean deleteByGuid(String guid) {
+        return FakeDatabase.TABLE_USER.removeIf(u -> u.getGuid().equals(guid));
+    }
 }
