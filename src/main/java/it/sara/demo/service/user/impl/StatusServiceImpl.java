@@ -37,10 +37,7 @@ public class StatusServiceImpl implements StatusService {
     @Override
     public StatusDTO healthCheck() throws GenericException {
         try {
-            StatusDTO status = new StatusDTO();
-            status.setCode(200);
-            status.setMessage("OK");
-            status.setTraceId(UUID.randomUUID().toString());
+            StatusDTO status = new StatusDTO(200, "OK", UUID.randomUUID().toString());
             return status;
         } catch (Exception e) {
             throw new GenericException(500, "Health check failed");
@@ -63,10 +60,7 @@ public class StatusServiceImpl implements StatusService {
             throw new GenericException(400, "First name is required");
         }
 
-        StatusDTO status = new StatusDTO();
-        status.setCode(200);
-        status.setMessage("User is valid");
-        status.setTraceId(UUID.randomUUID().toString());
+        StatusDTO status = new StatusDTO(200, "User is valid", UUID.randomUUID().toString());
         return status;
     }
 }

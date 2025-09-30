@@ -17,4 +17,16 @@ public class StatusDTO {
     private int code;
     private String message;
     private String traceId;
+
+    public StatusDTO(int code, String message, String traceId) {
+        this.code = code;
+        this.message = message;
+        this.traceId = traceId;
+    }
+
+    public int getCode() { return code; }
+    public String getMessage() { return message; }
+    public String getTraceId() { return traceId; }
+
+
 }
